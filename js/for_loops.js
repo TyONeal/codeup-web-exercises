@@ -48,7 +48,8 @@ for (let i = 1; i <= 9; i++) {
     console.log(res.join(""));
 }
 
-let x = 100;
-for (let i = 0; i <= 19; i++) {
-    console.log(x - 5);
+
+for (let i = 100; i >= 5; i-=5){
+    console.log(i);
 }
+
