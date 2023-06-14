@@ -1,0 +1,58 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.message-info {
+    width: 60%;
+    background: #cddeff;
+    margin: auto;
+
+    padding: 7px;
+    color: #2c208a;
+    border: #eeeeee solid;
+    border-radius: 5px;
+    font-weight: lighter;
+}
+
+.message-success {
+    width: 60%;
+    background: #cff3da;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 7px;
+    color: #15713b;
+    border: #eeeeee solid;
+    border-radius: 5px;
+    font-weight: lighter;
+}
+
+.message-warning {
+    width: 60%;
+    background: #fcfbc9;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 7px;
+    color: #a7973c;
+    border: #eeeeee solid;
+    border-radius: 5px;
+    font-weight: lighter;
+}
+
+.message-error {
+    width: 60%;
+    background: #fad3d7;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 7px;
+    color: #750220;
+    border: #eeeeee solid;
+    border-radius: 5px;
+    font-weight: lighter;
+}
