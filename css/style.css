@@ -1,4 +1,39 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+h2 {
+    color: blue;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #eeeeee;
+    font-family: "Apple Chancery"
+}
+
+header {
+    background-image: url("../img/veridian.jpeg");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.imageToEdit {
+    width: 300px
+    height: 300px
+}
+
+ul {
+    list-style-type: upper-roman;
+}
+
+table {
+    padding: 10px;
+}
+
+a:hover {
+    background-color: yellow;
 }
