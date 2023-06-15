@@ -1,8 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
     text-align: center;
-    font-size: xx-large;
+    font-size: 60px;
 }
 
 h2 {
@@ -19,6 +23,7 @@ header {
     background-image: url("../img/veridian.jpeg");
     background-position: right;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .imageToEdit {
@@ -43,6 +48,7 @@ a:hover {
     width: 84px;
     height: 84px;
     position: relative;
+    float: left;
 }
 
 .loader:before , .loader:after {
@@ -71,4 +77,3 @@ a:hover {
         transform: translate(-50%, -100%) scale(0)
     }
 }
-
