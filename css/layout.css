@@ -151,7 +151,7 @@
 }
 
 .d-flex.align-center {
-    align-content: center;
+    align-items: center;
 }
 
 .d-flex.align-end {
