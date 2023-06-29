@@ -1,0 +1,42 @@
+:root {
+    --bs-dropdown-divider-margin-y: 0rem;
+}
+
+.container-fluid.tko-hero {
+    min-height: 30vh;
+    background-image: url("../img/pizza_hero.webp");
+    background-position: center, center;
+    background-size: cover;
+}
+
+.dropdown-header {
+    background-color: blue;
+    text-decoration: unset;
+    color: white;
+    margin: auto;
+}
+
+.dropdown-second {
+    background-color: lightgrey;
+    padding: 0px;
+
+}
+
+.dropdown-padding {
+    padding-left: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+input[type="radio"] {
+    justify-content: start;
+    float: left;
+}
+
+.tko-dropdown-menu {
+    min-width: 100vw;
+}
+
+.dropdown-divider {
+    margin: 0;
+}

@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+.background-image {
+    background-image: url("../img/elden_ring_background.jpeg");
+    background-size: cover;
+}
+
+.header-text {
+    color: #eeeeee;
+}
