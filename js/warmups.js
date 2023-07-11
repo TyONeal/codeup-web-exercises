@@ -121,27 +121,45 @@ const runners = [
 
 // function getTopRunners(runnersArray) {
 //     let topRunners = [];
+//     const bestRunner = Math.min(calculateLapTimeAverage(topRunners));
 //
 //     for (let runner of runnersArray) {
 //         if(calculateLapTimeAverage(runner.lapTimes) <= 50) {
-//             topRunners.push(runner);
+//             topRunners.push(runner.lapTimes);
+//             console.log(Math.min(calculateLapTimeAverage(runner.lapTimes)));
 //         }
-//     } return topRunners;
-// }
+//     } console.log(bestRunner);
+//     return bestRunner;
 //
-// function calculateLapTimeAverage(lapTimesArray) {
-//     let total = 0;
-//     let count = 0;
-//     for (let lapTime of lapTimesArray) {
-//         total += lapTime;
-//         count++;
-//     }
-//
-//         return total/count;
 //
 // }
+
 //
-// console.log(getTopRunners(runners));
+
+function getTopRunner(runnersArray) {
+    let topRunner = runnersArray[0];
+
+    for (let i = 1; i < runnersArray.length; i ++) {
+        if(calculateLapTimeAverage(runnersArray[i].lapTimes) < calculateLapTimeAverage(topRunner.lapTimes)) {
+            topRunner = runnersArray[i];
+        }
+    }
+    return topRunner;
+}
+
+function calculateLapTimeAverage(lapTimesArray) {
+    let total = 0;
+    let count = 0;
+    for (let lapTime of lapTimesArray) {
+        total += lapTime;
+        count++;
+    }
+
+        return total/count;
+
+}
+
+
 
 // Expected Output:
 // [
