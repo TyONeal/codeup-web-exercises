@@ -1,4 +1,4 @@
- "use strict"
+"use strict"
 //
 //
 // $(function() {
@@ -17,25 +17,23 @@
 //
 // });
 
- $(function () {
+$(function () {
 
-     $('h1').click(function() {
-         $('h1').css("backgroundColor", "red")
+    $('h1').on("click", (e) => {
+        $(e.target).css("background", "green")
+    });
 
-     });
+    $('p').on('dblclick', () => {
+        $('p').css('font-size', '18px')
+    });
 
-     $('p').dblclick(function() {
-        $('p').css("font-size", '18px')
-     });
-
-     $('li').mouseenter(function() {
-         $(this).css("color", "red")
-             .mouseleave(function() {
-                 $(this).css("color", "black")
-             });
-
-     });
+    $('li').on('mouseenter', (e) => {
+                 $(e.target).css('color', 'red')
+            .on('mouseleave', (e) => {
+                 $(e.target).css('color', 'black')
+            });
+    });
 
 
- });
+});
 
