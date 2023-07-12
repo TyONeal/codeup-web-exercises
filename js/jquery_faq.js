@@ -45,3 +45,33 @@ dlElement.addEventListener('click', (e) => {
    }
 })
 
+// Traversal Exercise
+
+$(function() {
+   $('.submit-btn').on('click', () => {
+      $('ul').each(function(index, element) {
+         {
+            $(element).children().last().toggleClass('highlighted')
+         }
+      });
+   });
+
+   $('h3').on('click', (e) => {
+      $(e.target).next().css('font-weight', 'bold')
+      });
+
+   $('li').on('click', (e) => {
+      $(e.target).parent().children().first().css('color', 'blue')
+   });
+
+   $('.button').on('click', () => {
+      $('.button').prev().children().first().css('background-color', 'red')
+      $('.button').prev().children().last().css('background-color', 'green')
+   });
+
+
+
+});
+
+
+

@@ -3,5 +3,25 @@
 }
 
 .highlighted {
-    background-color: red;
+    background-color: yellow;
+}
+
+.picture-frame {
+    margin: 30px;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+
+.div-parent {
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    margin: 30px;
 }
