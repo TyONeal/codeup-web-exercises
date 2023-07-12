@@ -64,10 +64,11 @@ $(function() {
       $(e.target).parent().children().first().css('color', 'blue')
    });
 
-   $('.button').on('click', () => {
-      $('.button').prev().children().first().css('background-color', 'red')
-      $('.button').prev().children().last().css('background-color', 'green')
-   });
+
+
+   //bonus
+
+
 
 
 
