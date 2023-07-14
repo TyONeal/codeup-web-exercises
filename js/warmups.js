@@ -418,3 +418,20 @@ const runners = [
 // }
 //
 // housesInformation(hogwartsHouses);
+
+function removeEven(numbersArray) {
+
+    const oddArray = [];
+    for (let number of numbersArray) {
+        if (number % 2 !== 0) {
+            oddArray.push(number)
+
+        }
+    } return oddArray;
+}
+
+
+
+console.log(removeEven([1, 2, 3, 4, 5]));
+console.log(removeEven([2, 4, 5, 6]));
+
