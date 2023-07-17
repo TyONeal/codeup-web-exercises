@@ -49,9 +49,12 @@ $(() => {
     function displayThreeRestaurants() {
         restArray.forEach(function(rest) {
             geocode(rest.address, MAPBOX_TOKEN).then((restLocation) => {
+              console.log(restLocation);
                const restMarker = new mapboxgl.Marker()
                    .setLngLat(restLocation)
                    .addTo(map)
+
+                return restMarker;
            });
         });
     }
@@ -59,10 +62,23 @@ $(() => {
 
         //events
          document.querySelector('#rest-btn').addEventListener('click', favoriteRestaurant)
-         document.querySelector('#zoom1').addEventListener('select', () => {
-           map.setCenter()
-               .flyTo({zoom: 20});
+         document.querySelector('#zoom-dropdown').addEventListener('change', (e) => {
+             map.flyTo({zoom: e.target.value});
         });
+        const userInput = document.querySelector('#user-input-location')
+        userInput.addEventListener('keyup', (e) => {
+            console.log(e.code);
+            if (e.code === 'Enter') {
+                const inputVal = userInput.value;
+                geocode(`${inputVal}`, MAPBOX_TOKEN).then((input) => {
+                   map.flyTo({
+                       center: input,
+                       zoom:15
+                   })
+                });
+                userInput.value = '';
+            }
+    });
 
 
         //perform at load

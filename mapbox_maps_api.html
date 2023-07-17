@@ -17,13 +17,15 @@
 <div id="map" style="height: 80vh; width: 80vw;"></div>
 
 <button type="button" id="rest-btn">Favorite Restaurant</button>
-<select>
-    <option id="zoom0">Default</option>
-    <option id="zoom1">Zoom Level: 20</option>
-    <option id="zoom2">Zoom Level: 15</option>
-    <option id="zoom3">Zoom Level: 10</option>
+<select id="zoom-dropdown">
+    <option value="0">Default</option>
+    <option value="20">Zoom Level: 20</option>
+    <option value="15">Zoom Level: 15</option>
+    <option value="10">Zoom Level: 10</option>
 
 </select>
+
+<input type="text" id="user-input-location">
 
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

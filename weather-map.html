@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ty's Weather Map</title>
+
+
+    <!--Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet'>
+    <!--CSS and Styling -->
+    <link rel="stylesheet" href="css/weather-map.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/my_resets.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="container d-flex full-width grow">
+        <div class="row d-flex full-width no-padding">
+            <div class="column grow full-width">
+                <div id="map" class="map grow map-edit" ></div>
+            </div>
+            <div class="non-hidden-box column no-padding grow hidden-box">
+                <div class="forecast row grow full-width"></div>
+            </div>
+            <div class="column align-center sidebar">
+                <div>
+                    <div class="textbox">
+                            <input type="text" id="search" class="user-search-input input" onchange="hideIcon(this)"  onmouseout="this.value = ''; this.blur();">
+                        <i class="fas fa-search"></i>
+                    </div>
+
+                    <div class="card-row row">
+                        <div class="card grow card1"></div>
+                    </div>
+                    <div class="card-row row">
+                        <div class="card card2"></div>
+                    </div>
+                    <div class="card-row row">
+                        <div class="card card3"></div>
+                    </div>
+                    <div class="card-row row">
+                        <div class="card card4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="card card5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Scripts to run for Javascript/Jquery functionality -->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/min-max-temps.js"></script>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script src="js/weather-map.js"></script>
+<script src="js/keys.js"></script>
+
+</body>
+</html>
