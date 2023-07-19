@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Warmups</title>
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/my_resets.css">
+</head>
+<body>
+<div class="page-wrapper whole-page">
+
+    <button type="button" class="background-button">Change!</button>
+
+
+</div>
+<script>
+"use strict"
+
+        const background = document.querySelector('.whole-page')
+        const changeButton = document.querySelector('.background-button');
+        changeButton.addEventListener('click', ()=> {
+            background.style.backgroundColor = 'red';
+        });
+</script>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+</body>
+</html>

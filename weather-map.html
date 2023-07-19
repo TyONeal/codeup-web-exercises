@@ -18,36 +18,18 @@
 <body>
 
 <div class="page-wrapper">
+    <div id="map" class="map grow map-edit" ></div>
     <div class="container d-flex full-width grow">
         <div class="row d-flex full-width no-padding">
-            <div class="column grow full-width">
-                <div id="map" class="map grow map-edit" ></div>
-            </div>
-            <div class="non-hidden-box column no-padding grow hidden-box">
-                <div class="forecast row grow full-width"></div>
+            <div id="insertForecast" class="column justify-center">
+
             </div>
             <div class="column align-center sidebar">
-                <div>
-                    <div class="textbox">
-                            <input type="text" id="search" class="user-search-input input" onchange="hideIcon(this)"  onmouseout="this.value = ''; this.blur();">
-                        <i class="fas fa-search"></i>
-                    </div>
-
-                    <div class="card-row row">
-                        <div class="card grow card1"></div>
-                    </div>
-                    <div class="card-row row">
-                        <div class="card card2"></div>
-                    </div>
-                    <div class="card-row row">
-                        <div class="card card3"></div>
-                    </div>
-                    <div class="card-row row">
-                        <div class="card card4"></div>
-                    </div>
-                    <div class="row">
-                        <div class="card card5"></div>
-                    </div>
+                <form id="searchForm" class="textbox">
+                        <input type="text" id="search" class="user-search-input input">
+                    <i class="fas fa-search" id="search-icon"></i>
+                </form>
+                <div class="cards">
                 </div>
             </div>
         </div>
