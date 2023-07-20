@@ -56,8 +56,8 @@ console.log(getEmailsFromArray);
 
 // Problem 4
 
-const totalExperience = users.reduce((totalExperience, user) => {
-    return totalExperience + user.yearsOfExperience
+const totalExperience = users.reduce((accumulator, user) => {
+    return accumulator + user.yearsOfExperience
 
 }, 0);
 
@@ -69,9 +69,9 @@ console.log(averageExperience);
 
 //Problem 5
 
-const longestEmail = users.reduce((longestEmail, user) => {
+const longestEmail = users.reduce((accumulator, user) => {
         if (user.email.length > longestEmail.length) {
-            longestEmail = user.email
+            accumulator = user.email
         }
         return longestEmail;
 }, '');
@@ -82,8 +82,8 @@ console.log(longestEmail)
 
 //Problem 6
 
-const listOfInstructors = users.reduce ((listOfNames, user) => {
-       return listOfNames += ` ${user.name}`;
+const listOfInstructors = users.reduce ((accumulator, user) => {
+       return accumulator += ` ${user.name}`;
 
 }, 'Your instructors are:');
 
