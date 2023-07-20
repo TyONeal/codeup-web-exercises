@@ -80,7 +80,7 @@ const longestEmail = users.reduce((longestEmail, user) => {
 
 console.log(longestEmail)
 
-//Problem 6 ??? Having trouble getting this to show up as a single string...
+//Problem 6
 
 const listOfInstructors = users.reduce ((listOfNames, user) => {
        return listOfNames += ` ${user.name}`;
