@@ -88,10 +88,8 @@ $(() => {
                 })
             })
         }
-    function renderSearch(map) {
-        let userInput = document.querySelector('.user-search-input');
-        let userSearch = userInput.value;
-        geocode(userSearch, MAPBOX_TOKEN).then((coords) => {
+    function renderSearch(map, searchTerm) {
+        geocode(searchTerm, MAPBOX_TOKEN).then((coords) => {
            renderCards(coords);
            map.flyTo({
                zoom: 15,
@@ -101,6 +99,15 @@ $(() => {
             let marker = new mapboxgl.Marker({draggable: true});
             marker.setLngLat(coords).addTo(map);
             marker.addTo(map);
+            marker.on('dragend', () => {
+               map.flyTo({
+                   center: marker.getLngLat(),
+                   zoom: 15
+               })
+              let markerCoords = marker.getLngLat()
+                console.log(markerCoords)
+                renderCards(markerCoords.lat.toString(), markerCoords.lng.toString());
+            });
         });
     }
 
@@ -110,7 +117,10 @@ $(() => {
 
     searchForm.addEventListener('submit', (e)=>{
         e.preventDefault();
-        renderSearch(map);
+        let inputValue = document.querySelector('#search')
+        let searchTerm = inputValue.value;
+        inputValue.value = ''
+        renderSearch(map, searchTerm);
     });
 
 //perform on page load/////////////
