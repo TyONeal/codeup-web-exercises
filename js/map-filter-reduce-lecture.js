@@ -38,7 +38,15 @@
                 console.log(house);
             }
 
+           const largestPrice =  houses.reduce((highestPrice, house) => {
+                let price = parseFloat(house.price);
+                if (price > highestPrice) {
+                    highestPrice = price;
+                }
+                return highestPrice;
+            }, 0)
 
+            console.log(largestPrice);
 
 
         });

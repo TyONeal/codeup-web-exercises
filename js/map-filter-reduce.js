@@ -89,3 +89,15 @@ const listOfInstructors = users.reduce ((listOfNames, user) => {
 
 console.log(listOfInstructors);
 
+//Bonus
+
+const languagesOfInstructors = users.reduce ((accumulator, user) => {
+       for (let language of user.languages) {
+           accumulator.add(language);
+       }
+
+       return accumulator;
+}, new Set([]))
+
+console.log(languagesOfInstructors);
+
