@@ -38,26 +38,19 @@ const users = [
 
 //Problem 2
 
-const languageUsers = users.filter((user) => {
-        return user.languages.length >= 3
-
-
-
-});
+const languageUsers = users.filter(user => { return user.languages.length >= 3 });
     console.log(languageUsers);
 
 //Problem 3
 
-const getEmailsFromArray = users.map((user) => {
-   return user.email
-});
+const getEmailsFromArray = users.map(user => user.email );
 
 console.log(getEmailsFromArray);
 
 // Problem 4
 
 const totalExperience = users.reduce((accumulator, user) => {
-    return accumulator + user.yearsOfExperience
+    return accumulator + parseFloat(user.yearsOfExperience);
 
 }, 0);
 
@@ -70,21 +63,23 @@ console.log(averageExperience);
 //Problem 5
 
 const longestEmail = users.reduce((accumulator, user) => {
-        if (user.email.length > longestEmail.length) {
+        if (user.email.length > accumulator.length) {
             accumulator = user.email
         }
-        return longestEmail;
+        return accumulator;
 }, '');
-
-
 
 console.log(longestEmail)
 
 //Problem 6
 
-const listOfInstructors = users.reduce ((accumulator, user) => {
-       return accumulator += ` ${user.name}`;
-
+const listOfInstructors = users.reduce ((accumulator, user, index) => {
+       if (users.length - 1 === index) {
+           accumulator += ` and ${user.name}.`
+       } else {
+           accumulator += ` ${user.name},`;
+       }
+       return accumulator;
 }, 'Your instructors are:');
 
 console.log(listOfInstructors);
